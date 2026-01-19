@@ -14,6 +14,7 @@ This repository provides a streamlined environment for macOS/Linux:
 ### Prerequisites
 - Git
 - Python (required for Dotbot)
+- **Neovim** (optional but recommended for the full editor experience)
 
 ### Fresh Install
 To bootstrap on a new machine, run:
@@ -51,5 +52,5 @@ The Neovim setup has been migrated to a modern Lua-based configuration:
 - **Zsh Theme**: Powerlevel10k is pre-configured for a rich terminal experience. Run `p10k configure` to customize.
 
 ### 🛠️ Automation
-- **Dotbot**: Handles symlinking files to your home directory. 
-- **Auto-Installation**: The `install` script ensures `oh-my-zsh`, `powerlevel10k`, and essential plugins are installed during the first run.
+- **Dotbot**: Handles symlinking files to your home directory.
+- **Auto-Installation**: The `install` script ensures `oh-my-zsh`, `powerlevel10k`, and essential plugins (Vim and Neovim) are installed during the first run.

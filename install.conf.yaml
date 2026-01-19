@@ -35,3 +35,11 @@
   - command: vim +PlugInstall! +qall
     stdin: true
     stdout: true
+  - command: |
+      if command -v nvim >/dev/null 2>&1; then
+        echo "Syncing Neovim plugins..."
+        nvim --headless "+Lazy! sync" +qa
+      else
+        echo "Neovim not found, skipping plugin sync"
+      fi
+    stdout: true
