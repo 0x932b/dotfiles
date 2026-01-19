@@ -1,4 +1,3 @@
-print("Loading Neovim config...")
 require("config.options")
 require("config.keymaps")
 require("config.lazy")

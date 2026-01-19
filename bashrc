@@ -1,5 +1,5 @@
 # Common settings between bash and zsh.
-[ -f $HOME/.dotfiles/commonrc ] && source $HOME/.dotfiles/commonrc
+[ -f $HOME/.commonrc ] && source $HOME/.commonrc
 
 # PS1='\[\033[1;32m\][\t \u@\h \[\033[31m\]\W\[\033[34m\]\[\033[1;32m\] ] \[\033[31m\]\$\[\033[m\] '
 # Depracted for zsh
@@ -22,6 +22,5 @@ if [ -d "$EXT_PATH" ]; then
     for filename in "$EXT_PATH"/*; do
         # shellcheck source=/dev/null
         [ -f "$filename" ] && . "$filename"
-        echo "loaded $filename"
     done
 fi

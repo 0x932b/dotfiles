@@ -8,6 +8,7 @@
 - link:
     ~/.bash_profile:
     ~/.bashrc:
+    ~/.commonrc: commonrc
     ~/.bashrc_extensions:
     ~/.vimrc:
     ~/.vim:
