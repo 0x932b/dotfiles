@@ -28,6 +28,10 @@ assert_val("Command Nonu exists", vim.fn.exists(":Nonu"), 2)
 assert_val("ALE Python linters", vim.g.ale_linters.python[1], "ruff")
 assert_val("NERDTree Minimal UI", vim.g.NERDTreeMinimalUI, 1)
 
+-- 5. Check Colorscheme
+assert_val("colorscheme", vim.g.colors_name, "dm4")
+assert_val("termguicolors", vim.opt.termguicolors:get(), true)
+
 if failed then
     print("\nSome tests FAILED!")
     vim.cmd("cquit") -- Exit with non-zero status

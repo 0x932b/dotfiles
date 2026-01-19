@@ -58,6 +58,20 @@ opt.winminwidth = 0
 opt.laststatus = 2
 opt.cursorline = true
 
+-- Colorscheme
+opt.termguicolors = true
+vim.cmd("syntax on")
+
+-- Disable semantic tokens to match classic Vim look
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client then
+            client.server_capabilities.semanticTokensProvider = nil
+        end
+    end,
+})
+
 -- Encoding
 opt.fileencodings = "utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1"
 
