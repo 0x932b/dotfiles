@@ -97,6 +97,20 @@ vim.api.nvim_create_user_command("Nu", function()
     vim.opt.number = true
 end, {})
 
+-- Plugin globals
+vim.g.ale_linters = { python = { "ruff", "pyright" } }
+vim.g.ale_fixers = { python = { "black", "isort" } }
+vim.g.ale_python_isort_options = '-m 3 -tc'
+vim.g.ale_fix_on_save = 1
+
+vim.g.NERDTreeMinimalUI = 1
+vim.g.NERDTreeDirArrows = 1
+vim.g.NERDChristmasTree = 1
+vim.g.NERDTreeChDirMode = 2
+vim.g.NERDTreeHighlightCursorline = 1
+vim.g.NERDTreeIgnore = { '\\.pyc$', '\\.pyo$', '__pycache__$' }
+vim.g.NERDTreeWinSize = 40
+
 -- Autocmds
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup

@@ -1,3 +1,10 @@
+-- Set up runtime path to include the nvim directory
+local nvim_dir = vim.fn.getcwd() .. "/nvim"
+vim.opt.rtp:prepend(nvim_dir)
+
+-- Load the configuration
+require("init")
+
 local failed = false
 local function assert_val(name, actual, expected)
     if actual ~= expected then
